@@ -1,0 +1,26 @@
+body{
+    background-color: #e5c3a644;
+}
+.tv-icon{
+    width: 45%;
+    height: 35%;
+}
+.tv-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -8%
+}
+.title{
+    font-size: 80px;
+    color: #4B527E;
+    font-family: 'Sedgwick Ave Display', cursive;
+    padding-bottom: -10px;
+}
+.title-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0%;
+    margin-bottom: 5%
+}
