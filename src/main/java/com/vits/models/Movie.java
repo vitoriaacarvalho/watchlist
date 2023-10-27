@@ -1,6 +1,10 @@
 package com.vits.models;
 
 import java.time.LocalDateTime;
+
+import com.vits.enums.Owner;
+
+import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -15,12 +19,19 @@ public class Movie {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
-	private String owner;
+	private Owner owner;
+	private @Nonnull Integer ownerCode;
 	private LocalDateTime creationDate;
 	private @Nullable String comments;
-	private Integer howMuchWeWannaSeeIt;
-	private Boolean alreadyWatched;
+	private @Nonnull Integer howMuchWeWannaSeeIt;
+	private @Nonnull Boolean alreadyWatched;
 	
+	public Integer getOwnerCode() {
+		return ownerCode;
+	}
+	public void setOwnerCode(Integer ownerCode) {
+		this.ownerCode = ownerCode;
+	}
 	public Boolean getAlreadyWatched() {
 		return alreadyWatched;
 	}
@@ -33,10 +44,10 @@ public class Movie {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getOwner() {
+	public Owner getOwner() {
 		return owner;
 	}
-	public void setOwner(String owner) {
+	public void setOwner(Owner owner) {
 		this.owner = owner;
 	}
 	public LocalDateTime getCreationDate() {

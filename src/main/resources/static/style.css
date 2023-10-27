@@ -1,26 +1,65 @@
 body{
     background-color: #e5c3a644;
 }
+
 .tv-icon{
-    width: 45%;
-    height: 35%;
+    width: 58%;
+    height: 48%;
 }
 .tv-div{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: -8%
+    flex-direction: column;
+    text-align: center;
 }
-.title{
-    font-size: 80px;
-    color: #4B527E;
-    font-family: 'Sedgwick Ave Display', cursive;
-    padding-bottom: -10px;
+
+.film-list {
+    display: table; /* Permite usar propriedades de tabela */
+    margin: 0 auto; 
+    margin-top: -28%; 
+    height: 500px; /*talvez so mexer aqui*/
+    width: 650px;
+    justify-content: center;
+    align-items: center;
 }
-.title-div{
+
+.line {
+    text-align: center; /* Alinha o conteúdo das células no centro horizontalmente */
+    vertical-align: middle; 
+    height: 35px;
+    width: 500px;
+    background-color: rgba(147, 67, 126, 0.353);/* Alinha o conteúdo das células no centro verticalmente */
+}
+
+.movie-name,
+.movie-comments {
+    padding: 20px;
+    height: 35px;
+    margin: 8px; 
+}
+.tbody-list-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 0%;
-    margin-bottom: 5%
+}
+.film-list-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    margin-top: -23%; 
+    height: 350px;
+    background-color: rgb(166, 236, 166);
+    scrollbar-width: thin; /* Largura do scrollbar (pode ser "thin", "auto", ou um valor em pixels) */
+    scrollbar-color: darkgray lightgray;
+}
+.film-list-table::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 10px; /* Cantos arredondados do thumb */
+}
+
+/* Estilizando a track (trilha) */
+.film-list-table::-webkit-scrollbar-track {
+    background-color: darkgray;
 }

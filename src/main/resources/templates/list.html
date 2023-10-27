@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="../static/style.css"> --> 
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <title>Watchlist</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" href="../static/style.css"> --> 
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <title>Watchlist</title>
+</head>
+
+<body>
+        <div class="tv-div">
+            <img src="/tv.jpeg" class="tv-icon">
+            <div class="film-list">
+                <table class="film-list-table">
+                    <div class="tbody-list-container">
+                    <tbody >
+                        <tr class="line">
+                            <td><span class="movie-name"> <strong>Nome</strong> </span></td>
+                            <td><span class="movie-comments"> <strong>Comentários</strong></span></td>
+                        </tr>
+                        <tr th:each="movie : ${movieList}" class="line">
+                            <td><span th:text="${movie.name}" class="movie-name"> name </span></td>
+                            <td><span th:text="${movie.comments}" class="movie-comments"> comments </span></td>
+                        </tr>
+                    </tbody>
+                </div>
+               </table>
+            </div>
+        </div>
+</body>
+
+</html>
+
+</html>
