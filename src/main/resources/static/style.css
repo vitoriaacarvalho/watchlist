@@ -3,8 +3,8 @@ body{
 }
 
 .tv-icon{
-    width: 58%;
-    height: 48%;
+    width: 61%;
+    height: 53%;
 }
 .tv-div{
     display: flex;
@@ -29,14 +29,18 @@ body{
     vertical-align: middle; 
     height: 35px;
     width: 500px;
-    background-color: rgba(147, 67, 126, 0.353);/* Alinha o conteúdo das células no centro verticalmente */
+    background-color: rgba(217, 182, 219, 0.353);/* Alinha o conteúdo das células no centro verticalmente */
 }
 
 .movie-name,
-.movie-comments {
+.movie-comments, 
+.movie-how-much-we-wanna-see-it,
+.movie-owner {
     padding: 20px;
     height: 35px;
     margin: 8px; 
+    font-size: medium;
+    border-radius: 30px;
 }
 .tbody-list-container{
     display: flex;
@@ -49,8 +53,7 @@ body{
     align-items: center;
     overflow-y: scroll;
     margin-top: -23%; 
-    height: 350px;
-    background-color: rgb(166, 236, 166);
+    height: 305px;
     scrollbar-width: thin; /* Largura do scrollbar (pode ser "thin", "auto", ou um valor em pixels) */
     scrollbar-color: darkgray lightgray;
 }
@@ -62,4 +65,7 @@ body{
 /* Estilizando a track (trilha) */
 .film-list-table::-webkit-scrollbar-track {
     background-color: darkgray;
+}
+td{
+    border-radius: 30px;
 }
