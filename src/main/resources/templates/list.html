@@ -26,7 +26,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Sedgwick+Ave+Display&family=Sometype+Mono&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
@@ -35,16 +37,16 @@
 
 <body>
         <div class="tv-div">
-            <img src="/tv-linda.jpeg" class="tv-icon">
+            <img src="/tv5.jpeg" class="tv-icon">
             <div class="film-list">
                 <table class="film-list-table">
                     <div class="tbody-list-container">
                     <tbody >
                         <tr th:each="movie : ${movieList}" class="line">
-                            <td><span th:text="${movie.name}" class="movie-name"> name </span></td>
-                            <td><span th:text="${movie.comments}" class="movie-comments"> comments </span></td>
-                            <td><span th:text="${movie.owner}" class="movie-owner"> owner </span></td>
-                            <td><span th:text="${movie.howMuchWeWannaSeeIt}" class="movie-how-much-we-wanna-see-it"> 05 </span></td>
+                            <td class="td-movie"><span th:text="${movie.name}" class="movie-name"> name </span></td>
+                            <td class="td-comments"><span th:text="${movie.comments}" class="movie-comments"> comments </span></td>
+                            <td class="td-owner"><span th:text="${movie.owner}" class="movie-owner"> owner </span></td>
+                            <td class="td-howMuchWeWannaSeeIt"><span th:text="${movie.howMuchWeWannaSeeIt}" class="movie-how-much-we-wanna-see-it"> 05 </span></td>
                         </tr>
                     </tbody>
                 </div>

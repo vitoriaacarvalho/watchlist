@@ -25,7 +25,6 @@ public class ListMovies {
 	@GetMapping
 	public String getAllMovies(Model model) {
 		List<Movie> allMovies =repo.findAll();
-		System.out.print(allMovies);
 		model.addAttribute("movieList", allMovies);
 		return "list";
 	}

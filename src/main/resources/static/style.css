@@ -1,5 +1,5 @@
 body{
-    background-color: #e5c3a644;
+    background-color: rgba(197, 148, 210, 0.256);
 }
 
 .tv-icon{
@@ -13,7 +13,6 @@ body{
     flex-direction: column;
     text-align: center;
 }
-
 .film-list {
     display: table; /* Permite usar propriedades de tabela */
     margin: 0 auto; 
@@ -28,20 +27,24 @@ body{
     text-align: center; /* Alinha o conteúdo das células no centro horizontalmente */
     vertical-align: middle; 
     height: 35px;
-    width: 500px;
-    background-color: rgba(217, 182, 219, 0.353);/* Alinha o conteúdo das células no centro verticalmente */
+    width: 800px;
+    background-color: rgba(184, 142, 177, 0.265);/* Alinha o conteúdo das células no centro verticalmente */
 }
 
 .movie-name,
 .movie-comments, 
 .movie-how-much-we-wanna-see-it,
 .movie-owner {
-    padding: 20px;
     height: 35px;
-    margin: 8px; 
+    width: 90px;
+    text-wrap: nowrap; 
     font-size: medium;
     border-radius: 30px;
+    align-content: start;
+    align-items: start;
+    text-align: start;
 }
+
 .tbody-list-container{
     display: flex;
     align-items: center;
@@ -50,10 +53,11 @@ body{
 .film-list-table{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     overflow-y: scroll;
     margin-top: -23%; 
-    height: 305px;
+    height: 400px;
+    width: 800px;
     scrollbar-width: thin; /* Largura do scrollbar (pode ser "thin", "auto", ou um valor em pixels) */
     scrollbar-color: darkgray lightgray;
 }
@@ -66,6 +70,24 @@ body{
 .film-list-table::-webkit-scrollbar-track {
     background-color: darkgray;
 }
-td{
+td {
     border-radius: 30px;
+    font-family: 'Sometype Mono', monospace;
+    font-size: small;
+    color: #260328;
+
+}
+.td-movie{
+    width: 215px;
+    text-align: justify;
+}
+.td-comments{
+    width: 325px;
+    text-align: left;
+}
+.td-owner{
+    width: 160px;
+}
+.td-howMuchWeWannaSeeIt{
+    width: 50px;
 }
