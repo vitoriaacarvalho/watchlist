@@ -5,48 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="../static/style.css"> --> 
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/tv-by-id.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Sedgwick+Ave+Display&family=Sometype+Mono&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
     <title>Watchlist</title>
 </head>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="../static/style.css"> --> 
-    <link rel="stylesheet" href="/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Sedgwick+Ave+Display&family=Sometype+Mono&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
-    <title>Watchlist</title>
-</head>
-
-<body>
+    <body>
         <div class="tv-div">
-            <img src="/tv-byid.jpeg" class="tv-icon">
+            <img src="/tv10.jpeg" class="tv-icon">
             <div class="selected-movie-container">
-                <h1 th:text="${movie.name}"></h1>
-                <p th:text="${movie.comments}"></p>
-                <p th:text="${movie.owner}"></p>
-                <p th:intege="${movie.howMuchWeWannaSeeIt}"></p>
+                <h1 class="movie-title" th:text="${movie.name}"></h1>
+                <textarea class="movie-comments" th:attr="value=${movie.comments}"></textarea>
+                <div class="owner-checkbox-div">
+                    <input type="radio" name="owner-option" value="tales" th:checked="${movie.owner == 1}"> Tales
+                    <input type="radio" name="owner-option" value="vivi" th:checked="${movie.owner == 2}"> Vivi
+                </div>
+                <div class="howMuch-and-alreadyWatched">
+                    <div class="how-much">
+                        <select id="how-much-select">
+                            <option value="0" th:selected="${movie.howMuchWeWannaSeeIt == 0}">0</option>
+                            <option value="1" th:selected="${movie.howMuchWeWannaSeeIt == 1}">1</option>
+                            <option value="2" th:selected="${movie.howMuchWeWannaSeeIt == 2}">2</option>
+                            <option value="3" th:selected="${movie.howMuchWeWannaSeeIt == 3}">3</option>
+                            <option value="4" th:selected="${movie.howMuchWeWannaSeeIt == 4}">4</option>
+                            <option value="5" th:selected="${movie.howMuchWeWannaSeeIt == 5}">5</option>
+                            <option value="6" th:selected="${movie.howMuchWeWannaSeeIt == 6}">6</option>
+                            <option value="7" th:selected="${movie.howMuchWeWannaSeeIt == 7}">7</option>
+                            <option value="8" th:selected="${movie.howMuchWeWannaSeeIt == 8}">8</option>
+                            <option value="9" th:selected="${movie.howMuchWeWannaSeeIt == 9}">9</option>
+                            <option value="10" th:selected="${movie.howMuchWeWannaSeeIt == 10}">10</option>
+                        </select>
+                    </div>
+                    <div class="already-watched">
+                        <span aria-hidden="true">não</span>
+                        <input type="range" max="1" id="choice" name="choice" th:value="${movie.alreadyWatched}">
+                        <span aria-hidden="true">sim</span>
+                    </div>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="edit-button">editar</button>
+                <button class="delete-button">deletar</button>
             </div>
         </div>
-</body>
-
+    </body>
 </html>
 
-</html>
+

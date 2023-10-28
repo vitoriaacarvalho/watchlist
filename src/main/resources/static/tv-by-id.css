@@ -1,0 +1,171 @@
+body{
+    background-color: rgba(197, 148, 210, 0.256);
+}
+
+.tv-icon{
+    width: 61%;
+    height: 53%;
+}
+.tv-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.selected-movie-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -40%;
+}
+.movie-title{
+    font-family: 'Sedgwick Ave Display', cursive;
+    color: #260328;
+    margin-bottom: 65px;
+    width: 300px;
+    height: 70px;
+    text-align: center;
+}
+.movie-comments{
+    font-family: 'Sometype Mono', monospace;
+    color: #260328;
+    background-color: rgba(240, 248, 255, 0);
+    margin-top: -20px;
+    margin-bottom: 58px;
+    width: 250px;
+    height: 63px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #6b256500;
+    text-align: center;
+    resize: none;
+    outline: none;
+}
+
+.movie-owner-div{
+    font-family: 'Sometype Mono', monospace;
+    color: #260328;
+    background-color: rgba(240, 248, 255, 0);
+    margin-bottom: 70px;
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #6b256500;
+    text-align: center;
+    overflow-y: hidden;
+    outline: none;
+}
+
+.owner-checkbox-div {
+    font-family: 'Sometype Mono', monospace;
+    margin-top: -15px;
+}
+.radio-label {
+    position: relative;
+    padding-left: 30px; /* Espaço para o botão de rádio personalizado */
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.radio-label input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4CAF50; /* Cor da borda do botão de rádio */
+    border-radius: 50%; /* Faz o botão de rádio ter forma circular */
+    background-color: white;
+}
+
+.radio-label input[type="radio"]:checked + .radio-label:before {
+    background-color: #4CAF50; /* Cor de fundo do botão de rádio quando está marcado */
+    border-color: #4CAF50; /* Cor da borda do botão de rádio quando está marcado */
+}
+
+/* Efeito de hover para o botão de rádio */
+.radio-label:hover input[type="radio"] + .radio-label:before {
+    border-color: #555; /* Cor da borda quando o botão de rádio é destacado */
+}
+
+.howMuch-and-alreadyWatched{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    width: 380px;
+}
+
+.how-much{
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 20px;
+}
+
+.already-watched > input[type="range"] {
+    width: 20px;
+}
+  
+.already-watched > input[type="text"]:invalid {
+    outline: 2px solid rgb(232, 232, 232);
+}
+  
+.already-watched{
+    margin-left: 186px;
+    margin-top: 10px;
+    font-family: 'Sometype Mono', monospace;
+    color: #260328;
+}
+select{
+    width:50px;
+    background-color: #55555525;
+    border: none;
+}
+
+.action-buttons{
+    margin-top: 41px;
+}
+
+.edit-button{
+    margin-right: 52px;
+    background-color: #635b6344;
+    transition: transform 0.3s ease; 
+    border-radius: 30px;
+    width: 70px;
+    box-sizing: border-box;
+    border: 2px solid #6b256500;
+    height: 30px;
+    color: #260328;
+    font-family: 'Sometype Mono', monospace;
+}
+
+.delete-button{
+    margin-left: 52px;
+    transition: transform 0.3s ease; 
+    background-color: #635b6344;
+    border-radius: 30px;
+    width: 70px;
+    box-sizing: border-box;
+    border: 2px solid #6b256500;
+    font-family: 'Sometype Mono', monospace;
+    color: #260328;
+    height: 30px;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    transform: translateY(-5px); /* Move os botões para cima por 5 pixels no eixo Y */
+}
