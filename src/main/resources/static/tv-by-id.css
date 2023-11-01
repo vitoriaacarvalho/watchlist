@@ -25,13 +25,22 @@ body{
     margin-bottom: 65px;
     width: 300px;
     height: 70px;
+    font-size: 25px;
     text-align: center;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    margin-top: 20px ;
+    padding-top: -10px;
+    border: 2px solid #6b256500;
+    resize: none;
+    outline: none;
+    background-color: rgba(240, 248, 255, 0);
 }
 .movie-comments{
     font-family: 'Sometype Mono', monospace;
     color: #260328;
     background-color: rgba(240, 248, 255, 0);
-    margin-top: -20px;
+    margin-top: -15px;
     margin-bottom: 58px;
     width: 250px;
     height: 63px;
@@ -42,7 +51,6 @@ body{
     resize: none;
     outline: none;
 }
-
 .movie-owner-div{
     font-family: 'Sometype Mono', monospace;
     color: #260328;
@@ -61,11 +69,12 @@ body{
 
 .owner-checkbox-div {
     font-family: 'Sometype Mono', monospace;
-    margin-top: -15px;
+    margin-top: 1px;
+    color: #260328;
 }
 .radio-label {
     position: relative;
-    padding-left: 30px; /* Espaço para o botão de rádio personalizado */
+    padding-left: 30px; 
     cursor: pointer;
     font-size: 16px;
     line-height: 24px;
@@ -87,25 +96,24 @@ body{
     top: 2px;
     width: 20px;
     height: 20px;
-    border: 2px solid #4CAF50; /* Cor da borda do botão de rádio */
-    border-radius: 50%; /* Faz o botão de rádio ter forma circular */
+    border: 2px solid #4CAF50; 
+    border-radius: 50%; 
     background-color: white;
 }
 
 .radio-label input[type="radio"]:checked + .radio-label:before {
-    background-color: #4CAF50; /* Cor de fundo do botão de rádio quando está marcado */
-    border-color: #4CAF50; /* Cor da borda do botão de rádio quando está marcado */
+    background-color: #4CAF50; 
+    border-color: #4CAF50; 
 }
 
-/* Efeito de hover para o botão de rádio */
 .radio-label:hover input[type="radio"] + .radio-label:before {
-    border-color: #555; /* Cor da borda quando o botão de rádio é destacado */
+    border-color: #555;
 }
 
 .howMuch-and-alreadyWatched{
     display: flex;
     flex-direction: row;
-    margin-top: 60px;
+    margin-top: 65px;
     width: 380px;
 }
 
@@ -116,7 +124,9 @@ body{
 }
 
 .already-watched > input[type="range"] {
-    width: 20px;
+    width: 30px;
+    color: #260328;
+    cursor: pointer;
 }
   
 .already-watched > input[type="text"]:invalid {
@@ -124,7 +134,7 @@ body{
 }
   
 .already-watched{
-    margin-left: 186px;
+    margin-left: 180px;
     margin-top: 10px;
     font-family: 'Sometype Mono', monospace;
     color: #260328;
@@ -141,7 +151,7 @@ select{
 
 .edit-button{
     margin-right: 52px;
-    background-color: #635b6344;
+    background-color: #8187a644;
     transition: transform 0.3s ease; 
     border-radius: 30px;
     width: 70px;
@@ -150,12 +160,13 @@ select{
     height: 30px;
     color: #260328;
     font-family: 'Sometype Mono', monospace;
+    cursor: pointer;
 }
 
 .delete-button{
     margin-left: 52px;
     transition: transform 0.3s ease; 
-    background-color: #635b6344;
+    background-color: #8187a644;
     border-radius: 30px;
     width: 70px;
     box-sizing: border-box;
@@ -163,9 +174,10 @@ select{
     font-family: 'Sometype Mono', monospace;
     color: #260328;
     height: 30px;
+    cursor: pointer;
 }
 
 .edit-button:hover,
 .delete-button:hover {
-    transform: translateY(-5px); /* Move os botões para cima por 5 pixels no eixo Y */
+    transform: translateY(-5px); 
 }

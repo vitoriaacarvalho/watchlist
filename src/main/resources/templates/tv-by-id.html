@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link rel="stylesheet" href="../static/style.css"> --> 
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="/tv-by-id.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +19,10 @@
 </head>
     <body>
         <div class="tv-div">
-            <img src="/tv10.jpeg" class="tv-icon">
+            <img src="/tvrosa2.jpeg" class="tv-icon">
             <div class="selected-movie-container">
-                <h1 class="movie-title" th:text="${movie.name}"></h1>
-                <textarea class="movie-comments" th:attr="value=${movie.comments}"></textarea>
+                <textarea class="movie-title" th:text="${movie.name}">Scream 6</textarea>
+                <textarea class="movie-comments" th:attr="value=${movie.comments}"> mostrando aqui como é que fica essa belezura</textarea>
                 <div class="owner-checkbox-div">
                     <input type="radio" name="owner-option" value="tales" th:checked="${movie.owner == 1}"> Tales
                     <input type="radio" name="owner-option" value="vivi" th:checked="${movie.owner == 2}"> Vivi
